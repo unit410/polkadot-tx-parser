@@ -1,0 +1,27 @@
+image: node:14.13.1
+
+stages:
+  - test
+  - deploy
+
+lint:
+  stage: test
+  before_script:
+    - yarn
+  script:
+    - yarn workspace @polkadot-tx-parser/web lint
+
+pages:
+  stage: deploy
+  before_script:
+    - yarn
+  script:
+    - yarn workspace @polkadot-tx-parser/common build
+    - yarn workspace @polkadot-tx-parser/web build
+    - yarn workspace @polkadot-tx-parser/web next export
+    - mv packages/web/out public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

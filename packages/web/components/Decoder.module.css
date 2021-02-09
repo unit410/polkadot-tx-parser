@@ -1,0 +1,69 @@
+.Decoder {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.Data {
+  display: block;
+  width: 100%;
+  padding: 3px;
+  padding-left: 6px;
+  font-size: 15px;
+  margin: 0px;
+  height: 30px;
+  border: none;
+  box-sizing: border-box; 
+  outline-width: 3px;
+  outline-color: transparent;
+  outline-style: solid;
+  transition: outline-color 0.3s, outline-style 0.3s;
+}
+
+.Data:focus {
+  outline-width: 3px;
+  outline-color: transparent;
+  outline-style: solid;
+  transition: outline-color 0.3s, outline-style 0.3s;
+}
+
+.Error input[type="text"] {
+  outline-color: #DD3366;
+  outline-width: 3px;
+  outline-style: solid;
+  transition: outline-color 0.3s, outline-style 0.3s;
+}
+
+.Button {
+  display:inline-block;
+  box-sizing: border-box;
+  padding:4px 10px;
+  border:1px solid #FFFFFF;
+  margin-top: 10px;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight: bold;
+  color:#FFFFFF;
+  text-align:center;
+  transition: all 0.2s;
+  background-color: transparent;
+  height: 30px;
+  width: 100%;
+  cursor: pointer;
+  letter-spacing: 4px;
+}
+
+.Button:hover{
+  color:#000000;
+  background-color:#FFFFFF;
+}
+
+.Button:focus {
+  outline: none;
+}
+
+.TxContainer {
+  border-bottom: none;
+  border-left: 1px solid grey;
+  padding-left: 10px;
+}

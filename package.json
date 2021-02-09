@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "parse": "yarn workspace @polkadot-tx-parser/cli parse"
+  }
+}

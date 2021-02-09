@@ -1,0 +1,45 @@
+.Hidden {
+  display: none;
+}
+
+.Hash {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.HashTitle {
+  font-weight: bold;
+}
+
+.HashValue {
+  word-wrap: break-word;
+  margin-top: 5px;
+}
+
+.Tx {
+  text-align: left;
+  font-family: 'Courier New', Courier, monospace;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+  margin-top: 10px;
+}
+
+.Tx:last-child {
+  border-bottom: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.ProxyTitle {
+  font-size: 11px;
+  display: inline-block;
+  font-weight: normal;
+}
+
+.Name {
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 10px;
+}

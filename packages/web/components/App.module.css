@@ -1,0 +1,40 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background-image: radial-gradient(#ffffff66 20%, transparent 20%),
+  radial-gradient(#e6007b66 20%, transparent 20%);
+  background-position: 0 0, 50px 50px;
+  background-size: 100px 100px;
+}
+
+.Container {
+  width: 500px;  
+}
+
+.Decoder {
+  background-color: #282c34;
+  background-image: none;
+  padding: 30px;
+  border: 1px solid white;
+  position: relative;
+}
+
+.Hidden {
+  display: none;
+}
+
+.Title {
+  font-size: 25px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 9px;
+  width: 100%
+}
