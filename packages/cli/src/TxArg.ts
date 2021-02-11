@@ -37,11 +37,13 @@ export default function TxArg(
 }
 
 function formatArgValue(arg: Codec, aliases: Map<string, string> = new Map()) {
-  switch (arg.toRawType()) {
-    case "Compact<Balance>":
-      return formatBalance(arg as Compact<Balance>);
-    case "Compact<Perbill>":
-      return formatPerbill(arg as Compact<Perbill>);
+  const argMaybeUnwrapped = arg instanceof Compact ? arg.unwrap() : arg;
+
+  switch (argMaybeUnwrapped.toRawType()) {
+    case "Balance":
+      return formatBalance(arg as Balance);
+    case "Perbill":
+      return formatPerbill(arg as Perbill);
     case "AccountId":
       return Address(arg.toString(), aliases);
   }

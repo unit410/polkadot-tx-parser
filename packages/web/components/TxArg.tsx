@@ -33,13 +33,15 @@ class TxArg extends React.Component<IProps> {
   }
 
   formatArgValue(arg: Codec, aliases: Map<string, string>) {
-    switch (arg.toRawType()) {
-      case 'Compact<Balance>':
-        return formatBalance(arg as Compact<Balance>);
-      case 'Compact<Perbill>':
-        return formatPerbill(arg as Compact<Perbill>);
+    const argMaybeUnwrapped = arg instanceof Compact ? arg.unwrap() : arg;
+
+    switch (argMaybeUnwrapped.toRawType()) {
+      case 'Balance':
+        return formatBalance(argMaybeUnwrapped as Balance);
+      case 'Perbill':
+        return formatPerbill(argMaybeUnwrapped as Perbill);
       case 'AccountId':
-        return <Address address={arg.toString()} aliases={aliases} />;
+        return <Address address={argMaybeUnwrapped.toString()} aliases={aliases} />;
     }
   }
 
