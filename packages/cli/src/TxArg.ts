@@ -41,9 +41,9 @@ function formatArgValue(arg: Codec, aliases: Map<string, string> = new Map()) {
 
   switch (argMaybeUnwrapped.toRawType()) {
     case "Balance":
-      return formatBalance(arg as Balance);
+      return formatBalance(arg as Compact<Balance>);
     case "Perbill":
-      return formatPerbill(arg as Perbill);
+      return formatPerbill(arg as Compact<Perbill>);
     case "AccountId":
       return Address(arg.toString(), aliases);
   }
